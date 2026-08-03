@@ -1,0 +1,51 @@
+# ============================================================
+# LAZYFRAMEWORK - Stable Requirements
+# ============================================================
+
+# --- Core ---
+rich
+prompt-toolkit
+requests
+colorama
+
+# --- GUI ---
+PyQt6
+PyQt6-WebEngine
+#PyQt6-WebEngineCore
+
+# --- Network ---
+paramiko
+scapy
+cryptography
+pycryptodome
+stem
+dnspython
+
+# --- Web ---
+beautifulsoup4
+lxml
+flask
+flask-socketio
+python-socketio
+websocket-client
+
+# --- Data ---
+pyyaml
+python-magic
+
+# --- Image ---
+Pillow
+
+# --- Scraping ---
+selenium
+pyquery
+cssselect
+
+# --- Utils ---
+tqdm
+python-dotenv
+psutil
+watchdog
+
+# --- Database ---
+sqlalchemy

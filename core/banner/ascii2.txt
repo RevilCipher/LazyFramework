@@ -1,0 +1,39 @@
+[*] Initializing LazyFramework Exploit Engine...
+[+] Handler binding to 0.0.0.0:4444
+[+] Exploit target loading...
+[!] Payload staging complete
+
+                  <<<<>>>>>>           .----------------------------.
+               _>><<<<>>>>>>>>>       /               _____________/
+      \|/      \<<<<<  < >>>>>>>>>   /            _______________/
+-------*--===<=<<           <<<<<<<>/         _______________/
+      /|\     << @    _/      <<<<</       _____________/
+             <  \    /  \      >>>/      ________/  ____
+                 |  |   |       </      ______/____(- \\\\
+                 o_|   /        /      ______)         \  \\\\    \\\\\\\
+                      |  ._    (      ______)           \  \\\\\\\\\\\\\\\\
+                      | /       `----------'    /       /     \\\\\\\     \\
+              .______/\/     /                 /       /          \\\
+             / __.____/    _/         ________/       /\
+            / / / ________/`---------'         \     /  \_
+           / /  \ \                             \   \ \_  \
+          ( <    \ \                             >  /    \ \
+           \/      \\_                          / /       > )
+                    \_|                        / /       / /
+                                             _//       _//
+                                            /_|       /_|
+
+[*] Scanning target system...                                            
+[+] Port 22/tcp    OPEN     (SSH OpenSSH 7.4)                         
+[+] Port 80/tcp    OPEN     (HTTP Apache 2.4.6)                      
+[+] Port 443/tcp   OPEN     (HTTPS Apache 2.4.6)                       
+[+] Port 3306/tcp  OPEN     (MySQL 5.7.21)                            
+
+[!] Vulnerability found: CVE-2019-6340 (Lazy Auth Bypass)                  
+[!] Exploitation in progress...                                            
+
+[+] Exploitation complete. System fully compromised.
+[+] Dumping credentials from SAM database...
+[+] Post-exploitation modules loaded.
+
+Framework Status: █████████████████████ 100%
