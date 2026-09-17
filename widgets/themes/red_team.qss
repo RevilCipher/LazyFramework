@@ -1,0 +1,977 @@
+/* ============================================
+   RED TEAM THEME – 3270NerdFontPropo & Hack
+   Background: #000000 (pure black)
+   Text: #bd000d (dark red)
+   Font: 3270NerdFontPropo & Hack
+   Tab: Hanya border bawah, tanpa border radius
+   ============================================ */
+
+/* ==== GLOBAL FONTS - 3270NerdFontPropo & Hack ==== */
+QMainWindow, QDialog, QWidget {
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+QLabel, QPushButton, QLineEdit, QTextEdit, QListWidget, 
+QTreeWidget, QMenu, QMenuBar, QTabBar, QComboBox, QGroupBox, QStatusBar {
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+/* ==== GLOBAL BACKGROUND & TEXT ==== */
+QMainWindow, QDialog, QWidget {
+    background-color: #000000;
+    color: #d4d4d4;
+}
+
+/* ==== MAIN WINDOW ==== */
+QMainWindow::separator {
+    background: #bd000d;
+    width: 1px;
+    height: 1px;
+}
+
+/* ==== MENU BAR ==== */
+QMenuBar {
+    background-color: #000000;
+    color: #bd000d;
+    border-bottom: 2px solid #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 0;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    color: #bd000d;
+    padding: 8px 16px;
+    margin: 0px;
+}
+
+QMenuBar::item:selected {
+    background-color: #bd000d;
+    color: #ffffff;
+}
+
+QMenuBar::item:pressed {
+    background-color: #8a000a;
+    color: #ffffff;
+}
+
+/* ==== MENU ==== */
+QMenu {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    padding: 5px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+}
+
+QMenu::item {
+    padding: 8px 25px 8px 20px;
+    margin: 2px;
+}
+
+QMenu::item:selected {
+    background-color: #bd000d;
+    color: #ffffff;
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #bd000d;
+    margin: 5px 10px;
+}
+
+/* ==== TAB WIDGET – HANYA BORDER BAWAH, TANPA BORDER RADIUS ==== */
+QTabWidget::pane {
+    border: 1px solid #bd000d;
+    background-color: #000000;
+}
+
+QTabWidget::tab-bar {
+    alignment: center;
+}
+
+/* Default tab - tanpa border, hanya border bawah 2px hitam */
+QTabBar::tab {
+    background-color: #000000;
+    color: #888888;
+    padding: 8px 16px;
+    margin-right: 1px;
+    border: none;
+    border-bottom: 2px solid #000000;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* Tab yang dipilih/aktif - border bawah #bd000d 3px */
+QTabBar::tab:selected {
+    background-color: #000000;
+    color: #bd000d;
+    border: none;
+    border-bottom: 3px solid #bd000d;
+}
+
+/* Tab saat di-hover (tidak dipilih) - border bawah #bd000d 2px */
+QTabBar::tab:hover:!selected {
+    background-color: #1a0000;
+    color: #bd000d;
+    border: none;
+    border-bottom: 2px solid #bd000d;
+}
+
+/* ==== MAIN TABS (Console, Options, Info, Sessions, Network Map, AI) ==== */
+QTabWidget#main_tabs QTabBar::tab {
+    background-color: #000000;
+    color: #888888;
+    border: none;
+    border-bottom: 2px solid #000000;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+QTabWidget#main_tabs QTabBar::tab:selected {
+    background-color: #000000;
+    color: #bd000d;
+    border: none;
+    border-bottom: 3px solid #bd000d;
+}
+
+QTabWidget#main_tabs QTabBar::tab:hover:!selected {
+    background-color: #1a0000;
+    color: #bd000d;
+    border: none;
+    border-bottom: 2px solid #bd000d;
+}
+
+/* ==== MODULE TABS (inner tabs) ==== */
+QTabWidget#module_tabs QTabBar::tab {
+    background-color: #000000;
+    color: #888888;
+    border: none;
+    border-bottom: 2px solid #000000;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+QTabWidget#module_tabs QTabBar::tab:selected {
+    background-color: #000000;
+    color: #bd000d;
+    border: none;
+    border-bottom: 3px solid #bd000d;
+}
+
+QTabWidget#module_tabs QTabBar::tab:hover:!selected {
+    background-color: #1a0000;
+    color: #bd000d;
+    border: none;
+    border-bottom: 2px solid #bd000d;
+}
+
+/* ==== INFO/BROWSER TABS (inside sidebar) ==== */
+QTabWidget#info_browser_tabs QTabBar::tab {
+    background-color: #000000;
+    color: #888888;
+    border: none;
+    border-bottom: 2px solid #000000;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+QTabWidget#info_browser_tabs QTabBar::tab:selected {
+    background-color: #000000;
+    color: #bd000d;
+    border: none;
+    border-bottom: 3px solid #bd000d;
+}
+
+QTabWidget#info_browser_tabs QTabBar::tab:hover:!selected {
+    background-color: #1a0000;
+    color: #bd000d;
+    border: none;
+    border-bottom: 2px solid #bd000d;
+}
+
+/* ==== SIDEBAR TREE WIDGET (Module Tree) – FULL RED THEME ==== */
+QTreeWidget {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+    outline: none;
+    show-decoration-selected: 0;
+}
+
+/* Tree item - normal state */
+QTreeWidget::item {
+    padding: 6px 8px;
+    margin: 1px 0px;
+    color: #ffffff;
+    border: none;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+/* Tree item - hover */
+QTreeWidget::item:hover {
+    background-color: #1a0000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+}
+
+/* Tree item - selected (active) */
+QTreeWidget::item:selected {
+    background-color: #bd000d;
+    color: #ffffff;
+    border: 1px solid #bd000d;
+}
+
+/* Tree item - selected & hover */
+QTreeWidget::item:selected:hover {
+    background-color: #8a000a;
+    color: #ffffff;
+}
+
+/* Tree branch indicators */
+QTreeWidget::branch {
+    background: transparent;
+}
+
+QTreeWidget::branch:closed:has-children {
+    color: #bd000d;
+    font-weight: bold;
+}
+
+QTreeWidget::branch:open:has-children {
+    color: #bd000d;
+    font-weight: bold;
+}
+
+/* Tree header */
+QHeaderView::section {
+    background-color: #000000;
+    color: #bd000d;
+    padding: 6px 10px;
+    border: 1px solid #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-weight: bold;
+}
+
+/* Scrollbar inside tree */
+QTreeWidget QScrollBar:vertical {
+    background-color: #000000;
+    width: 10px;
+}
+
+QTreeWidget QScrollBar::handle:vertical {
+    background-color: #bd000d;
+    min-height: 30px;
+}
+
+QTreeWidget QScrollBar::handle:vertical:hover {
+    background-color: #bd000d;
+}
+
+QTreeWidget QScrollBar::add-line:vertical,
+QTreeWidget QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* ==== LIST WIDGET (Session List, Module List) ==== */
+QListWidget {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    padding: 4px;
+    outline: none;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+}
+
+QListWidget::item {
+    padding: 8px 10px;
+    border-bottom: 1px solid #1a0000;
+    color: #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+QListWidget::item:selected {
+    background-color: #bd000d;
+    color: #ffffff;
+    border: 1px solid #bd000d;
+}
+
+QListWidget::item:hover {
+    background-color: #1a0000;
+    color: #bd000d;
+}
+
+QListWidget::item:selected:hover {
+    background-color: #8a000a;
+    color: #ffffff;
+}
+
+/* Session list specific */
+QListWidget#session_list {
+    background-color: #000000;
+    border-color: #bd000d;
+}
+
+QListWidget#session_list::item:selected {
+    background-color: #bd000d;
+    color: #ffffff;
+}
+
+/* Module list specific */
+QListWidget#module_list {
+    background-color: #000000;
+    border-color: #bd000d;
+}
+
+/* ==== TEXT EDIT / CONSOLE ==== */
+QTextEdit {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    padding: 8px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 13px;
+    selection-background-color: #bd000d;
+    selection-color: #ffffff;
+}
+
+QTextEdit#module_detail_info {
+    background-color: #000000;
+    color: #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+    border: 1px solid #bd000d;
+}
+
+QTextEdit#console_output {
+    background-color: #000000;
+    color: #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    border: 1px solid #bd000d;
+    font-size: 14px;
+}
+
+QTextEdit#session_output {
+    background-color: #000000;
+    color: #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    border: 1px solid #bd000d;
+    font-size: 11px;
+}
+
+QTextEdit#session_info {
+    background-color: #000000;
+    color: #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 13px;
+    border: 1px solid #bd000d;
+}
+
+/* ==== GROUP BOX ==== */
+QGroupBox {
+    background-color: #000000;
+    border: 1px solid #bd000d;
+    margin-top: 12px;
+    padding-top: 10px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-weight: bold;
+    color: #bd000d;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 8px;
+    background-color: #000000;
+    color: #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+/* ==== LINE EDIT (Options Tab & All Inputs) ==== */
+QLineEdit {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    padding: 7px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 13px;
+    selection-background-color: #bd000d;
+    selection-color: #ffffff;
+}
+
+QLineEdit:focus {
+    border: 1px solid #bd000d;
+    background-color: #0a0000;
+}
+
+QLineEdit::placeholder {
+    color: #663333;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+QLineEdit#session_cmd_input {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+}
+
+QLineEdit#search_input {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+}
+
+/* ==== OPTIONS TAB SPESIFIC - FONT 3270NerdFontPropo & HACK ==== */
+QWidget#options_widget QLineEdit {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    padding: 6px 10px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 13px;
+}
+
+QWidget#options_widget QComboBox {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    padding: 6px 10px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+}
+
+QWidget#options_widget QLabel {
+    color: #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ==== COMBO BOX ==== */
+QComboBox {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    padding: 6px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+}
+
+QComboBox:hover {
+    border: 1px solid #bd000d;
+}
+
+QComboBox::drop-down {
+    border: none;
+}
+
+QComboBox::down-arrow {
+    image: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #bd000d;
+    margin-right: 5px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #000000;
+    color: #bd000d;
+    selection-background-color: #bd000d;
+    selection-color: #ffffff;
+    border: 1px solid #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+/* ==== LABEL ==== */
+QLabel {
+    color: #d4d4d4;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+}
+
+QLabel#session_header {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 10px;
+    padding: 8px;
+    border-bottom: 2px solid #bd000d;
+    color: #bd000d;
+    background: #000000;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+/* ==== BUTTONS ==== */
+QPushButton {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    padding: 7px 15px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-weight: bold;
+    font-size: 12px;
+    min-width: 50px;
+}
+
+QPushButton:hover {
+    background-color: #1a0000;
+    border-color: #bd000d;
+    color: #bd000d;
+}
+
+QPushButton:pressed {
+    background-color: #0a0000;
+}
+
+QPushButton:disabled {
+    background-color: #000000;
+    color: #444444;
+    border-color: #333333;
+}
+
+/* Run/Stop buttons */
+QPushButton[action="run"], QPushButton[action="stop"] {
+    background-color: #bd000d;
+    color: #ffffff;
+    border: 1px solid #bd000d;
+    font-weight: bold;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+QPushButton[action="run"]:hover, QPushButton[action="stop"]:hover {
+    background-color: #8a000a;
+}
+
+/* Category buttons in sidebar */
+QPushButton[category="all"],
+QPushButton[category="recon"],
+QPushButton[category="scan"],
+QPushButton[category="exploit"],
+QPushButton[category="post"],
+QPushButton[category="privesc"],
+QPushButton[category="persistence"],
+QPushButton[category="lateral"],
+QPushButton[category="web"],
+QPushButton[category="cloud"],
+QPushButton[category="mobile"],
+QPushButton[category="aux"],
+QPushButton[category="payloads"],
+QPushButton[category="evasion"],
+QPushButton[category="report"] {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+}
+
+QPushButton[category="all"]:hover,
+QPushButton[category="recon"]:hover,
+QPushButton[category="scan"]:hover,
+QPushButton[category="exploit"]:hover,
+QPushButton[category="post"]:hover,
+QPushButton[category="privesc"]:hover,
+QPushButton[category="persistence"]:hover,
+QPushButton[category="lateral"]:hover,
+QPushButton[category="web"]:hover,
+QPushButton[category="cloud"]:hover,
+QPushButton[category="mobile"]:hover,
+QPushButton[category="aux"]:hover,
+QPushButton[category="payloads"]:hover,
+QPushButton[category="evasion"]:hover,
+QPushButton[category="report"]:hover {
+    background-color: #bd000d;
+    color: #ffffff;
+    border-color: #bd000d;
+}
+
+QPushButton[category="all"]:pressed,
+QPushButton[category="recon"]:pressed,
+QPushButton[category="scan"]:pressed,
+QPushButton[category="exploit"]:pressed,
+QPushButton[category="post"]:pressed,
+QPushButton[category="privesc"]:pressed,
+QPushButton[category="persistence"]:pressed,
+QPushButton[category="lateral"]:pressed,
+QPushButton[category="web"]:pressed,
+QPushButton[category="cloud"]:pressed,
+QPushButton[category="mobile"]:pressed,
+QPushButton[category="aux"]:pressed,
+QPushButton[category="payloads"]:pressed,
+QPushButton[category="evasion"]:pressed,
+QPushButton[category="report"]:pressed {
+    background-color: #8a000a;
+    color: #ffffff;
+}
+
+/* ==== SCROLL BAR ==== */
+QScrollBar:vertical {
+    background-color: #000000;
+    width: 10px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #bd000d;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #bd000d;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    background-color: #000000;
+    height: 10px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #bd000d;
+    min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: #bd000d;
+}
+
+/* ==== SPLASH SCREEN ==== */
+QSplashScreen {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #000000, stop:0.5 #0a0000, stop:1 #000000);
+    border: 2px solid #bd000d;
+}
+
+/* ==== TOOL TIP ==== */
+QToolTip {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    padding: 4px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 11px;
+}
+
+/* ==== PROGRESS BAR ==== */
+QProgressBar {
+    background-color: #000000;
+    border: 1px solid #bd000d;
+    text-align: center;
+    color: #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 11px;
+}
+
+QProgressBar::chunk {
+    background-color: #bd000d;
+}
+
+/* ==== CHECK BOX ==== */
+QCheckBox {
+    color: #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 11px;
+}
+
+QCheckBox::indicator {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #bd000d;
+    background-color: #000000;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #bd000d;
+    border-color: #bd000d;
+}
+
+/* ==== RADIO BUTTON ==== */
+QRadioButton {
+    color: #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 11px;
+}
+
+QRadioButton::indicator {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #bd000d;
+    background-color: #000000;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #bd000d;
+    border-color: #bd000d;
+}
+
+/* ==== SPIN BOX ==== */
+QSpinBox, QDoubleSpinBox {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    padding: 4px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+/* ==== SLIDER ==== */
+QSlider::groove:horizontal {
+    height: 6px;
+    background-color: #1a0000;
+}
+
+QSlider::handle:horizontal {
+    background-color: #bd000d;
+    width: 14px;
+    height: 14px;
+    margin: -4px 0;
+}
+
+QSlider::handle:horizontal:hover {
+    background-color: #bd000d;
+}
+
+/* ==== STATUS BAR ==== */
+QStatusBar {
+    background-color: #000000;
+    color: #bd000d;
+    border-top: 1px solid #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 11px;
+}
+
+QStatusBar::item {
+    border: none;
+}
+
+/* ==== SPLITTER ==== */
+QSplitter::handle {
+    background-color: #bd000d;
+}
+
+QSplitter::handle:horizontal {
+    width: 2px;
+}
+
+QSplitter::handle:vertical {
+    height: 2px;
+}
+
+QSplitter::handle:hover {
+    background-color: #bd000d;
+}
+
+/* ==== MESSAGE BOX ==== */
+QMessageBox {
+    background-color: #000000;
+    color: #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+QMessageBox QPushButton {
+    min-width: 80px;
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+QMessageBox QPushButton:hover {
+    background-color: #bd000d;
+    color: #ffffff;
+}
+
+/* ==== INPUT DIALOG ==== */
+QInputDialog {
+    background-color: #000000;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+/* ==== FILE DIALOG ==== */
+QFileDialog {
+    background-color: #000000;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+/* ==== TABLE WIDGET ==== */
+QTableWidget {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    gridline-color: #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 11px;
+}
+
+QTableWidget::item {
+    padding: 6px;
+}
+
+QTableWidget::item:selected {
+    background-color: #bd000d;
+    color: #ffffff;
+}
+
+QTableWidget::item:hover {
+    background-color: #1a0000;
+}
+
+/* ==== SCROLL AREA ==== */
+QScrollArea {
+    background-color: #000000;
+    border: none;
+}
+
+/* ==== DOCK WIDGET ==== */
+QDockWidget::title {
+    background-color: #000000;
+    color: #bd000d;
+    padding: 5px;
+    border-bottom: 1px solid #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+QDockWidget::close-button, QDockWidget::float-button {
+    background-color: #bd000d;
+    color: #ffffff;
+}
+
+QDockWidget::close-button:hover, QDockWidget::float-button:hover {
+    background-color: #8a000a;
+}
+
+/* ==== FRAME ==== */
+QFrame {
+    background-color: transparent;
+}
+
+/* ==== TOOL BAR ==== */
+QToolBar {
+    background-color: #000000;
+    border-bottom: 1px solid #bd000d;
+    spacing: 3px;
+    padding: 3px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+QToolBar::handle {
+    image: none;
+}
+
+/* ==== SESSION BUTTONS ==== */
+QPushButton#session_button {
+    background-color: #bd000d;
+    color: #ffffff;
+    border: 1px solid #bd000d;
+    padding: 6px 12px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 11px;
+}
+
+QPushButton#session_button:hover {
+    background-color: #8a000a;
+}
+
+/* ==== SEARCH INPUT ==== */
+QLineEdit#search_input {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    padding: 6px 10px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+}
+
+QLineEdit#search_input:focus {
+    border: 1px solid #bd000d;
+    background-color: #0a0000;
+}
+
+QLineEdit#search_input::placeholder {
+    color: #663333;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+/* ==== AI ASSISTANT SPECIFIC ==== */
+QTextEdit#chat_display {
+    background-color: #000000;
+    color: #d4d4d4;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+    border: 1px solid #bd000d;
+}
+
+QTextEdit#context_box {
+    background-color: #000000;
+    color: #bd000d;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 12px;
+    border: 1px solid #bd000d;
+}
+
+QComboBox#provider_cb, QComboBox#model_cb {
+    background-color: #000000;
+    color: #bd000d;
+    border: 1px solid #bd000d;
+    padding: 4px 8px;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+    font-size: 11px;
+}
+
+QComboBox#provider_cb:hover, QComboBox#model_cb:hover {
+    border: 1px solid #bd000d;
+}
+
+QComboBox#provider_cb QAbstractItemView, 
+QComboBox#model_cb QAbstractItemView {
+    background-color: #000000;
+    color: #bd000d;
+    selection-background-color: #bd000d;
+    selection-color: #ffffff;
+    border: 1px solid #bd000d;
+}
+
+/* ==== TOOLBAR MODULE LABEL ==== */
+
+/* Saat tidak ada module (No module loaded) */
+QLabel#current_module_label {
+    color: #bd000d;
+    font-size: 10pt;
+    font-weight: 500;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+/* Saat module loaded (aktif) */
+QLabel#current_module_label[active="true"] {
+    color: #bd000d;
+    font-size: 10pt;
+    font-weight: 600;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
+
+/* Saat module loaded tapi tidak aktif */
+QLabel#current_module_label[active="false"] {
+    color: #bd000d;
+    font-size: 10pt;
+    font-weight: 500;
+    font-family: "3270NerdFontPropo", "Hack", monospace;
+}
