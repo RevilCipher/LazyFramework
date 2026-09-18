@@ -84,3 +84,10 @@ idna>=3.0
 # JANGAN pakai <6.11 — error dengan setuptools 71+
 pyinstaller>=6.11,<7.0
 pyinstaller-hooks-contrib>=2024.0
+
+pypykatz 
+impacket 
+pywinrm 
+paramiko 
+ldap3 
+dnspython
