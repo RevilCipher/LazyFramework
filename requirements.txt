@@ -1,0 +1,45 @@
+# ═══════════════════════════════════════════════════════════════
+# LazyFramework — Complete Requirements
+# ═══════════════════════════════════════════════════════════════
+
+# ── Core GUI ──
+PyQt6>=6.5.0
+PyQt6-WebEngine>=6.5.0
+
+# ── CLI ──
+rich>=13.7.0
+prompt_toolkit>=3.0.40
+
+# ── C2 Server ──
+flask>=3.0.0
+
+# ── Cryptography ──
+pycryptodome>=3.19.0
+cryptography>=41.0.0
+
+# ── HTTP / Network ──
+requests>=2.31.0
+urllib3>=2.0.0
+
+# ── Image ──
+Pillow>=10.0.0
+
+# ── Build ──
+pyinstaller>=6.0.0
+
+# ── Post-Exploitation ──
+pypykatz>=0.6.0
+impacket>=0.11.0
+pywinrm>=0.4.3
+paramiko>=3.3.0
+ldap3>=2.9.1
+dnspython>=2.4.0
+boto3>=1.28.0
+py7zr>=0.20.0
+
+# ── Optional ──
+mega.py>=1.0.8
+python-telegram-bot>=20.0
+
+# ── Platform-specific ──
+pywin32>=306 ; sys_platform == "win32"
